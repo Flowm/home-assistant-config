@@ -1,0 +1,67 @@
+Weather:
+  name: Weather
+  entities:
+  - sun.sun
+  - sensor.yr_symbol
+  - sensor.yr_temperature
+  - sensor.yr_cloudiness
+  - sensor.yr_precipitation
+  - sensor.yr_wind_speed
+
+TravelTime:
+  name: TravelTime
+  entities:
+  - sensor.travel_tum
+  - sensor.travel_aschau
+
+MediaOut:
+  name: MediaOut
+  entities:
+  - media_player.spotify
+
+MediaStatus:
+  name: MediaStatus
+  entities:
+  - sensor.lastfm_phei2k
+#  - remote.atv2
+
+Crypto:
+  name: Crypto
+  entities:
+  - sensor.crypto_bitcoin
+  - sensor.crypto_ethereum
+
+Devices:
+  name: Devices
+  entities:
+  - device_tracker.iph7
+  - sensor.iph7_battery_level
+  - sensor.iph7_battery_state
+
+System:
+  name: System
+  entities:
+  - sensor.fritz_netmonitor
+  - sensor.speedtest_download
+  - sensor.speedtest_upload
+  - sensor.speedtest_ping
+
+WeatherView:
+  name: Weather
+  view: yes
+  entities:
+  - group.weather
+
+MediaView:
+  name: Media
+  view: true
+  entities:
+  - group.mediaout
+  - group.mediastatus
+
+SystemView:
+  name: System
+  view: yes
+  entities:
+  - group.system
+  - group.devices

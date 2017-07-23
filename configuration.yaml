@@ -1,0 +1,54 @@
+homeassistant:
+  name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: !secret home_elevation
+  unit_system: metric
+  time_zone: Europe/Berlin
+  customize: !include includes/customize.yaml
+
+# Enables the frontend
+frontend:
+ios:
+
+# Enables configuration UI
+config:
+
+http:
+  api_password: !secret http_password
+  # base_url: !secret http_url
+
+# Checks for available updates
+updater:
+
+# Discover some devices automatically
+# discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Text to speech
+tts:
+  platform: google
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+mqtt:
+  broker: localhost
+  client_id: home-assistant
+
+# automation: !include includes/automations.yaml
+group: !include includes/groups.yaml
+light: !include includes/light.yaml
+media_player: !include includes/media_player.yaml
+notify: !include includes/notify.yaml
+# script: !include includes/scripts.yaml
+sensor: !include includes/sensors.yaml
+zone: !include includes/zones.yaml

@@ -1,0 +1,24 @@
+# Hide
+light.bbedh:
+  hidden: true
+light.bbeds:
+  hidden: true
+light.kboiler:
+  hidden: true
+light.kitchen:
+  hidden: true
+light.pbedroom:
+  hidden: true
+remote.atv2:
+  hidden: true
+media_player.atv2:
+  hidden: true
+
+# Name
+sensor.fritz_netmonitor:
+  friendly_name: "Fritz!Box"
+
+group.weather:
+  order: 1
+group.mediaout:
+  order: 2

@@ -1,0 +1,23 @@
+- name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  radius: !secret home_radius
+  icon: mdi:briefcase
+
+- name: Work
+  latitude: !secret work_latitude
+  longitude: !secret work_longitude
+  radius: !secret work_radius
+  icon: mdi:briefcase
+
+- name: Aschau
+  latitude: !secret aschau_latitude
+  longitude: !secret aschau_longitude
+  radius: !secret aschau_radius
+  icon: mdi:briefcase
+
+- name: TUM
+  latitude: !secret tum_latitude
+  longitude: !secret tum_longitude
+  radius: !secret tum_radius
+  icon: mdi:briefcase

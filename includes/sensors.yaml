@@ -1,0 +1,44 @@
+# Weather
+- platform: yr
+  monitored_conditions:
+    - symbol
+    - temperature
+    - cloudiness
+    - precipitation
+    - windSpeed
+
+# System
+- platform: fritzbox_netmonitor
+  host: !secret ip_fritz
+- platform: speedtest
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+
+# Crypto
+- platform: coinmarketcap
+  currency: bitcoin
+  entity_namespace: crypto
+- platform: coinmarketcap
+  currency: ethereum
+  entity_namespace: crypto
+
+- platform: lastfm
+  api_key: !secret lastfm_api_key
+  users:
+    - !secret lastfm_user
+
+# Travel
+- platform: google_travel_time
+  name: TUM
+  origin: zone.home
+  destination: zone.tum
+  api_key: !secret google_api_key
+  entity_namespace: travel
+- platform: google_travel_time
+  name: Aschau
+  api_key: !secret google_api_key
+  origin: zone.home
+  destination: zone.aschau
+  entity_namespace: travel

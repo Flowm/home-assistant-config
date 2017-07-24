@@ -1,24 +1,35 @@
-Weather:
+# Groups
+WeatherBasic:
   name: Weather
   entities:
   - sensor.ds_summary
   - sensor.ds_temperature
   - sensor.ds_precip_probability
   - sensor.ds_precip_intensity
+
+WeatherFull:
+  name: Weather Full
+  entities:
   - sensor.ds_daily_low_temperature
   - sensor.ds_daily_high_temperature
   - sensor.ds_humidity
+  - sensor.ds_daily_summary
   - sun.sun
   - sensor.moon
 
-TravelTime:
-  name: TravelTime
+WeatherImg:
+  name: WeatherImg
+  entities:
+  - camera.dwd
+
+Travel:
+  name: Travel
   entities:
   - sensor.travel_tum
   - sensor.travel_aschau
 
-MediaOut:
-  name: MediaOut
+Media:
+  name: Media
   entities:
   - media_player.spotify
 
@@ -26,13 +37,20 @@ MediaStatus:
   name: MediaStatus
   entities:
   - sensor.lastfm_phei2k
-#  - remote.atv2
 
 Crypto:
   name: Crypto
   entities:
   - sensor.crypto_bitcoin
   - sensor.crypto_ethereum
+
+Network:
+  name: Network
+  entities:
+  - sensor.fritz_netmonitor
+  - sensor.speedtest_download
+  - sensor.speedtest_upload
+  - sensor.speedtest_ping
 
 Devices:
   name: Devices
@@ -41,30 +59,35 @@ Devices:
   - sensor.iph7_battery_level
   - sensor.iph7_battery_state
 
-System:
-  name: System
+# Views
+Default:
+  name: Default
+  icon: mdi:home
+  view: yes
   entities:
-  - sensor.fritz_netmonitor
-  - sensor.speedtest_download
-  - sensor.speedtest_upload
-  - sensor.speedtest_ping
+  - group.weatherbasic
+  - group.travel
+  - group.media
+  - group.crypto
 
 WeatherView:
   name: Weather
   view: yes
   entities:
-  - group.weather
+  - group.weatherbasic
+  - group.weatherfull
+  - group.weatherimg
 
 MediaView:
   name: Media
   view: true
   entities:
-  - group.mediaout
+  - group.media
   - group.mediastatus
 
 SystemView:
   name: System
   view: yes
   entities:
-  - group.system
+  - group.network
   - group.devices

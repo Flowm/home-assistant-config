@@ -45,6 +45,7 @@ mqtt:
   client_id: home-assistant
 
 # automation: !include includes/automations.yaml
+camera: !include includes/camera.yaml
 group: !include includes/groups.yaml
 light: !include includes/light.yaml
 media_player: !include includes/media_player.yaml

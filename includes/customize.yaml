@@ -14,6 +14,9 @@ remote.atv2:
 media_player.atv2:
   hidden: true
 
+# Icons
+#   icon: mdi:battery
+
 # Name
 sensor.fritz_netmonitor:
   friendly_name: "Fritz!Box"

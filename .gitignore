@@ -1,0 +1,14 @@
+# Personal config
+secrets.yaml
+phue.conf
+.ios.conf
+.spotify-token-cache
+
+# HA data
+.HA_VERSION
+.uuid
+TODO.md
+deps/
+home-assistant.log
+home-assistant_v2.db
+known_devices.yaml

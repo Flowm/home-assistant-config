@@ -46,6 +46,9 @@ mqtt:
   broker: localhost
   client_id: home-assistant
 
+ifttt:
+    key: !secret ifttt_api_key
+
 # automation: !include includes/automations.yaml
 camera: !include includes/camera.yaml
 group: !include includes/groups.yaml

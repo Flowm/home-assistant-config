@@ -17,6 +17,9 @@
     - temperature_max
     - humidity
 - platform: moon
+- platform: time_date
+  display_options:
+    - 'date_time'
 
 # System
 - platform: fritzbox_netmonitor

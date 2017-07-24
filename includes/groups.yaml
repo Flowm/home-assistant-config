@@ -1,12 +1,15 @@
 Weather:
   name: Weather
   entities:
+  - sensor.ds_summary
+  - sensor.ds_temperature
+  - sensor.ds_precip_probability
+  - sensor.ds_precip_intensity
+  - sensor.ds_daily_low_temperature
+  - sensor.ds_daily_high_temperature
+  - sensor.ds_humidity
   - sun.sun
-  - sensor.yr_symbol
-  - sensor.yr_temperature
-  - sensor.yr_cloudiness
-  - sensor.yr_precipitation
-  - sensor.yr_wind_speed
+  - sensor.moon
 
 TravelTime:
   name: TravelTime

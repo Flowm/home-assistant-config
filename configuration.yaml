@@ -25,11 +25,9 @@ updater:
 # discovery:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
-conversation:
-
-# Text to speech
-tts:
-  platform: google
+# conversation:
+# tts:
+#   platform: google
 
 # Enables support for tracking state changes over time.
 history:

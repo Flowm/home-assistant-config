@@ -1,3 +1,36 @@
+# Views
+Default:
+  name: Default
+  icon: mdi:home
+  view: yes
+  entities:
+  - group.weatherbasic
+  - group.travel
+  - group.media
+  - group.crypto
+
+WeatherView:
+  name: Weather
+  view: yes
+  entities:
+  - group.weatherbasic
+  - group.weatherfull
+  - group.weatherimg
+
+MediaView:
+  name: Media
+  view: true
+  entities:
+  - group.media
+  - group.mediastatus
+
+SystemView:
+  name: System
+  view: yes
+  entities:
+  - group.network
+  - group.devices
+
 # Groups
 WeatherBasic:
   name: Weather
@@ -58,36 +91,3 @@ Devices:
   - device_tracker.iph7
   - sensor.iph7_battery_level
   - sensor.iph7_battery_state
-
-# Views
-Default:
-  name: Default
-  icon: mdi:home
-  view: yes
-  entities:
-  - group.weatherbasic
-  - group.travel
-  - group.media
-  - group.crypto
-
-WeatherView:
-  name: Weather
-  view: yes
-  entities:
-  - group.weatherbasic
-  - group.weatherfull
-  - group.weatherimg
-
-MediaView:
-  name: Media
-  view: true
-  entities:
-  - group.media
-  - group.mediastatus
-
-SystemView:
-  name: System
-  view: yes
-  entities:
-  - group.network
-  - group.devices

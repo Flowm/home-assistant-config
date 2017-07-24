@@ -5,20 +5,31 @@ Default:
   view: yes
   entities:
   - group.weatherbasic
+  - group.weatherimg
   - group.travel
   - group.media
   - group.crypto
 
 WeatherView:
   name: Weather
+  icon: mdi:white-balance-sunny
   view: yes
   entities:
   - group.weatherbasic
   - group.weatherfull
   - group.weatherimg
 
+LightView:
+  name: Light
+  icon: mdi:lightbulb
+  view: yes
+  entities:
+  - group.all_switches
+  - group.all_lights
+
 MediaView:
   name: Media
+  icon: mdi:music
   view: true
   entities:
   - group.media
@@ -26,6 +37,7 @@ MediaView:
 
 SystemView:
   name: System
+  icon: mdi:settings
   view: yes
   entities:
   - group.network
@@ -43,12 +55,11 @@ WeatherBasic:
 WeatherFull:
   name: Weather Full
   entities:
+  - sun.sun
+  - sensor.moon
   - sensor.ds_daily_low_temperature
   - sensor.ds_daily_high_temperature
   - sensor.ds_humidity
-  - sensor.ds_daily_summary
-  - sun.sun
-  - sensor.moon
 
 WeatherImg:
   name: WeatherImg

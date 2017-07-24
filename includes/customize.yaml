@@ -21,7 +21,10 @@ media_player.atv2:
 sensor.fritz_netmonitor:
   friendly_name: "Fritz!Box"
 
-group.weather:
-  order: 1
-group.mediaout:
-  order: 2
+# Group order
+# group.weatherbasic:
+#   order: 1
+# group.weatherimg:
+#   order: 2
+# group.travel:
+#   order: 3

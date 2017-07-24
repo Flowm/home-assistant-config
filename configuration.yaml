@@ -15,8 +15,12 @@ ios:
 config:
 
 http:
+  server_host: 127.0.0.1
+  base_url: !secret http_url
   api_password: !secret http_password
-  # base_url: !secret http_url
+  use_x_forwarded_for: True
+  ip_ban_enabled: True
+  login_attempts_threshold: 5
 
 # Checks for available updates
 updater:

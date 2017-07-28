@@ -55,6 +55,7 @@ WeatherBasic:
 WeatherFull:
   name: Weather Full
   entities:
+  - sensor.date__time
   - sun.sun
   - sensor.moon
   - sensor.ds_daily_low_temperature

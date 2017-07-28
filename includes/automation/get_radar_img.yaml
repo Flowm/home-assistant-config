@@ -1,0 +1,7 @@
+- alias: Get radar images
+  trigger:
+    platform: time
+    minutes: '/20'
+    seconds: 00
+  action:
+    service: shell_command.get_radar_img

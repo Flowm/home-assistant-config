@@ -4,6 +4,9 @@ phue.conf
 .ios.conf
 .spotify-token-cache
 
+# Dymanic data
+media/
+
 # HA data
 .HA_VERSION
 .uuid

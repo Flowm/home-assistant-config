@@ -1,4 +1,3 @@
-- platform: generic
+- platform: local_file
   name: DWD
-  still_image_url: http://www.dwd.de/DWD/wetter/radar/rad_bay_akt.jpg?{{ states('sensor.date__time') }}
-  limit_refetch_to_url_change: True
+  file_path: /home/homeassistant/.homeassistant/media/rad_bay_akt.jpg

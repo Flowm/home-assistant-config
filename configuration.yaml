@@ -49,12 +49,12 @@ mqtt:
 ifttt:
     key: !secret ifttt_api_key
 
-automation: !include includes/automation.yaml
+automation: !include_dir_merge_list includes/automation
 camera: !include includes/camera.yaml
 group: !include includes/group.yaml
 light: !include includes/light.yaml
 media_player: !include includes/media_player.yaml
 notify: !include includes/notify.yaml
-script: !include includes/script.yaml
 sensor: !include includes/sensor.yaml
+shell_command: !include includes/shell_command.yaml
 zone: !include includes/zone.yaml

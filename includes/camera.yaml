@@ -1,3 +1,7 @@
 - platform: local_file
-  name: DWD
+  name: Radar
   file_path: /home/homeassistant/.homeassistant/media/rad_bay_akt.jpg
+
+- platform: local_file
+  name: Webcam Freimann
+  file_path: /home/homeassistant/.homeassistant/media/web_freimann.jpg

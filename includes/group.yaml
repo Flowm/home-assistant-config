@@ -5,6 +5,7 @@ Default:
   view: yes
   entities:
   - group.weatherbasic
+  - group.weatherradar
   - group.weatherimg
   - group.travel
   - group.media
@@ -17,6 +18,7 @@ WeatherView:
   entities:
   - group.weatherbasic
   - group.weatherfull
+  - group.weatherradar
   - group.weatherimg
 
 LightView:
@@ -63,10 +65,15 @@ WeatherFull:
   - sensor.ds_daily_high_temperature
   - sensor.ds_humidity
 
+WeatherRadar:
+  name: WeatherRadar
+  entities:
+  - camera.radar
+
 WeatherImg:
   name: WeatherImg
   entities:
-  - camera.dwd
+  - camera.webcam_freimann
 
 LightBedroom:
   name: Lights Bedroom

@@ -1,1 +1,1 @@
-get_radar_img: /home/homeassistant/.homeassistant/includes/shell/get_radar_img.sh
+get_images: /home/homeassistant/.homeassistant/includes/shell/get_images.sh

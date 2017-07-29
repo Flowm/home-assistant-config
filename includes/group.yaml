@@ -24,8 +24,9 @@ LightView:
   icon: mdi:lightbulb
   view: yes
   entities:
-  - group.all_switches
-  - group.all_lights
+  - group.lightbedroom
+  - group.lightkitchen
+  - group.lightpbedroom
 
 MediaView:
   name: Media
@@ -66,6 +67,29 @@ WeatherImg:
   name: WeatherImg
   entities:
   - camera.dwd
+
+LightBedroom:
+  name: Lights Bedroom
+  entities:
+  - light.bg_all
+  - light.bg_bed
+  - light.bbed
+  - light.bcenter
+  - light.bdesk
+  - light.bentrance
+
+LightKitchen:
+  name: Lights Kitchen
+  entities:
+  - light.kg_all
+  - light.klights
+  - light.kboiler
+
+LightPBedroom:
+  name: Lights PRoom
+  entities:
+  - light.pg_all
+  - light.plights
 
 Travel:
   name: Travel

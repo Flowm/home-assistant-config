@@ -1,0 +1,13 @@
+# Travel
+- platform: google_travel_time
+  name: TUM
+  origin: zone.home
+  destination: zone.tum
+  api_key: !secret google_api_key
+  entity_namespace: travel
+- platform: google_travel_time
+  name: Aschau
+  api_key: !secret google_api_key
+  origin: zone.home
+  destination: zone.aschau
+  entity_namespace: travel

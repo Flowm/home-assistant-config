@@ -120,6 +120,7 @@ Network:
   - sensor.speedtest_download
   - sensor.speedtest_upload
   - sensor.speedtest_ping
+  - sensor.fastcom_download
 
 Devices:
   name: Devices

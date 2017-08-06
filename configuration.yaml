@@ -75,6 +75,7 @@ notify: !include includes/notify.yaml
 sensor: !include_dir_merge_list includes/sensor
 shell_command: !include includes/shell_command.yaml
 zone: !include includes/zone.yaml
+panel_iframe: !include includes/panel_iframe.yaml
 
 # Discover some devices automatically
 # discovery:

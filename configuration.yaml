@@ -14,6 +14,7 @@ ios:
 # Enables configuration UI
 config:
 
+# Webserver config
 http:
   server_host: 127.0.0.1
   base_url: !secret http_url
@@ -25,22 +26,11 @@ http:
 # Checks for available updates
 updater:
 
-# Discover some devices automatically
-# discovery:
-
-# Allows you to issue voice commands from the frontend in enabled browsers
-# conversation:
-# tts:
-#   platform: google
-
 # Enables support for tracking state changes over time.
 history:
 
 # View all events in a logbook
 logbook:
-
-# Track the sun
-sun:
 
 # Disable some overly verbose logs
 logger:
@@ -50,6 +40,7 @@ logger:
     homeassistant.components.camera: warn
     homeassistant.components.http: warn
 
+# InfluxDB logging
 influxdb:
   host: !secret influxdb_host
   username: !secret influxdb_user
@@ -63,12 +54,17 @@ influxdb:
     instance: piot
     source: hass
 
+# MQTT integration
 mqtt:
   broker: localhost
   client_id: home-assistant
 
+# IFTTT integration
 ifttt:
-    key: !secret ifttt_api_key
+  key: !secret ifttt_api_key
+
+# Track the sun
+sun:
 
 automation: !include_dir_merge_list includes/automation
 camera: !include includes/camera.yaml
@@ -79,3 +75,13 @@ notify: !include includes/notify.yaml
 sensor: !include_dir_merge_list includes/sensor
 shell_command: !include includes/shell_command.yaml
 zone: !include includes/zone.yaml
+
+# Discover some devices automatically
+# discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+# conversation:
+
+# Text to speech
+# tts:
+#   platform: google

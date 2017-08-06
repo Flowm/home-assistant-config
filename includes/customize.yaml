@@ -1,4 +1,10 @@
 # Hide
+light.bg_all:
+  hidden: true
+light.kg_all:
+  hidden: true
+light.pg_all:
+  hidden: true
 light.bbedh:
   hidden: true
 light.bbeds:
@@ -20,14 +26,8 @@ media_player.atv2:
 # Name
 sensor.fritz_netmonitor:
   friendly_name: "Fritz!Box"
-light.bg_all:
-  friendly_name: "All"
 light.bg_bed:
   friendly_name: "Bed"
-light.kg_all:
-  friendly_name: "All"
-light.pg_all:
-  friendly_name: "All"
 
 # Group order
 # group.weatherbasic:

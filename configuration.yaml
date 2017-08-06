@@ -26,11 +26,18 @@ http:
 # Checks for available updates
 updater:
 
-# Enables support for tracking state changes over time.
+# Record event in sqlite db
+recorder:
+  purge_days: 30
+  exclude: !include includes/exclude.yaml
+
+# Tracking state changes over time
 history:
+  exclude: !include includes/exclude.yaml
 
 # View all events in a logbook
 logbook:
+  exclude: !include includes/exclude.yaml
 
 # Disable some overly verbose logs
 logger:
@@ -45,11 +52,7 @@ influxdb:
   host: !secret influxdb_host
   username: !secret influxdb_user
   password: !secret influxdb_password
-  exclude:
-    entities:
-       - entity.id1
-    domains:
-       - automation
+  exclude: !include includes/exclude.yaml
   tags:
     instance: piot
     source: hass

@@ -1,0 +1,13 @@
+entities:
+  - sensor.moon
+  - sensor.date__time
+domains:
+  - automation
+  - calendar
+  - camera
+  - group
+  - scene
+  - script
+  - sun
+  - updater
+  - weblink

@@ -42,6 +42,27 @@ logbook:
 # Track the sun
 sun:
 
+# Disable some overly verbose logs
+logger:
+  default: info
+  logs:
+    homeassistant.components.device_tracker: warn
+    homeassistant.components.camera: warn
+    homeassistant.components.http: warn
+
+influxdb:
+  host: !secret influxdb_host
+  username: !secret influxdb_user
+  password: !secret influxdb_password
+  exclude:
+    entities:
+       - entity.id1
+    domains:
+       - automation
+  tags:
+    instance: piot
+    source: hass
+
 mqtt:
   broker: localhost
   client_id: home-assistant

@@ -28,6 +28,8 @@ sensor.fritz_netmonitor:
   friendly_name: "Fritz!Box"
 light.bg_bed:
   friendly_name: "Bed"
+device_tracker.iph7:
+  friendly_name: "iPh7"
 
 # Group order
 # group.weatherbasic:

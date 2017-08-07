@@ -1,7 +1,7 @@
 - alias: Update images
   trigger:
     platform: time
-    minutes: '/20'
-    seconds: 00
+    minutes: "/20"
+    seconds: 55
   action:
     service: shell_command.get_images

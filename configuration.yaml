@@ -59,8 +59,10 @@ influxdb:
 
 # MQTT integration
 mqtt:
-  broker: localhost
+  broker: 127.0.0.1
+  port: 1883
   client_id: home-assistant
+  protocol: 3.1
 
 # IFTTT integration
 ifttt:

@@ -10,6 +10,7 @@ Default:
   - group.travel
   - group.media
   - group.crypto
+  - group.airquality
 
 WeatherView:
   name: Weather
@@ -20,6 +21,7 @@ WeatherView:
   - group.weatherfull
   - group.weatherradar
   - group.weatherimg
+  - group.airquality
 
 LightView:
   name: Light
@@ -74,6 +76,15 @@ WeatherImg:
   name: WeatherImg
   entities:
   - camera.webcam_freimann
+
+AirQuality:
+  name: Air Quality
+  entities:
+  - sensor.aq_temperature
+  - sensor.aq_humidity
+  - sensor.aq_pressure
+  - sensor.aq_co2
+  - sensor.aq_tvoc
 
 LightBedroom:
   name: Lights Bedroom

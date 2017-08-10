@@ -21,7 +21,16 @@ media_player.atv2:
   hidden: true
 
 # Icons
-#   icon: mdi:battery
+sensor.aq_temperature:
+  icon: mdi:thermometer
+sensor.aq_humidity:
+  icon: mdi:water-percent
+sensor.aq_pressure:
+  icon: mdi:fan
+sensor.aq_co2:
+  icon: mdi:waves
+sensor.aq_tvoc:
+  icon: mdi:waves
 
 # Name
 sensor.fritz_netmonitor:

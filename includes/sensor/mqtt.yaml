@@ -2,24 +2,29 @@
   state_topic: "sensor/air-quality"
   name: "Temperature"
   unit_of_measurement: "°C"
+  entity_namespace: aq
   value_template: "{{ value_json.temperature }}"
 - platform: mqtt
   state_topic: "sensor/air-quality"
   name: "Humidity"
   unit_of_measurement: "%"
+  entity_namespace: aq
   value_template: "{{ value_json.humidity }}"
 - platform: mqtt
   state_topic: "sensor/air-quality"
   name: "Pressure"
   unit_of_measurement: "Pa"
+  entity_namespace: aq
   value_template: "{{ value_json.pressure }}"
 - platform: mqtt
   state_topic: "sensor/air-quality"
   name: "CO2"
   unit_of_measurement: "CO2"
+  entity_namespace: aq
   value_template: "{{ value_json.co2 }}"
 - platform: mqtt
   state_topic: "sensor/air-quality"
   name: "TVOC"
   unit_of_measurement: "TVOC"
+  entity_namespace: aq
   value_template: "{{ value_json.tvoc }}"

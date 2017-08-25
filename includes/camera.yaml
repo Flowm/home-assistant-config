@@ -5,3 +5,7 @@
 - platform: local_file
   name: Webcam Freimann
   file_path: /home/homeassistant/.homeassistant/media/web_freimann.jpg
+
+- platform: ffmpeg
+  name: Nara cam
+  input: !secret ip_cam_nara

@@ -64,6 +64,10 @@ mqtt:
   client_id: home-assistant
   protocol: 3.1
 
+# FFMPEG bin
+ffmpeg:
+  ffmpeg_bin: /opt/ffmpeg/latest/ffmpeg
+
 # IFTTT integration
 ifttt:
   key: !secret ifttt_api_key

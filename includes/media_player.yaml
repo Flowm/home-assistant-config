@@ -3,4 +3,6 @@
   client_secret: !secret spotify_client_secret
   aliases:
       6b7e7e57f812c8fd3b797f8406e4b1c2b2610f7c: "icarus"
+      14190563c81b5e479614ba0c4497d7c9a5544686: "spirit"
+      644aa7413795f9dff664f0afdd623ec383a577a0: "iph7"
 - platform: apple_tv

@@ -4,21 +4,21 @@ Default:
   icon: mdi:home
   view: yes
   entities:
-  - group.weatherbasic
+  - group.weather
   - group.weatherradar
   - group.weatherimg
   - group.travel
   - group.media
   - group.crypto
   - group.airquality
-  - group.energybasic
+  - group.energy
 
 WeatherView:
   name: Weather
   icon: mdi:white-balance-sunny
   view: yes
   entities:
-  - group.weatherbasic
+  - group.weather
   - group.weatherfull
   - group.weatherradar
   - group.weatherimg
@@ -51,7 +51,7 @@ SystemView:
   - group.devices
 
 # Groups
-WeatherBasic:
+Weather:
   name: Weather
   entities:
   - sensor.ds_summary
@@ -70,12 +70,12 @@ WeatherFull:
   - sensor.ds_humidity
 
 WeatherRadar:
-  name: WeatherRadar
+  name: Weather Radar
   entities:
   - camera.radar
 
 WeatherImg:
-  name: WeatherImg
+  name: Weather Img
   entities:
   - camera.webcam_freimann
 
@@ -103,6 +103,7 @@ LightKitchen:
   entities:
   - light.kg_all
   - light.klights
+  - light.ktable
   - light.kboiler
 
 LightPBedroom:
@@ -123,7 +124,7 @@ Media:
   - media_player.spotify
 
 MediaStatus:
-  name: MediaStatus
+  name: Media Status
   entities:
   - sensor.lastfm_phei2k
 
@@ -133,7 +134,7 @@ Crypto:
   - sensor.crypto_bitcoin
   - sensor.crypto_ethereum
 
-EnergyBasic:
+Energy:
   name: Energy
   entities:
   - sensor.tpicarus_watts
@@ -141,7 +142,7 @@ EnergyBasic:
   - sensor.tpicarus_volts
 
 EnergyFull:
-  name: Energy
+  name: Energy Full
   entities:
   - sensor.tpicarus_watts
   - sensor.tpicarus_kw_daily

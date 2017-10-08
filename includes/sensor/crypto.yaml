@@ -1,6 +1,6 @@
-- platform: coinmarketcap
-  currency: bitcoin
-  entity_namespace: crypto
-- platform: coinmarketcap
-  currency: ethereum
-  entity_namespace: crypto
+#- platform: coinmarketcap
+#  currency: bitcoin
+#  entity_namespace: crypto
+#- platform: coinmarketcap
+#  currency: ethereum
+#  entity_namespace: crypto

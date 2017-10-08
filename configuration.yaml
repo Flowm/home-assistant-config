@@ -82,10 +82,11 @@ group: !include includes/group.yaml
 light: !include includes/light.yaml
 media_player: !include includes/media_player.yaml
 notify: !include includes/notify.yaml
+panel_iframe: !include includes/panel_iframe.yaml
 sensor: !include_dir_merge_list includes/sensor
 shell_command: !include includes/shell_command.yaml
+switch: !include includes/switch.yaml
 zone: !include includes/zone.yaml
-panel_iframe: !include includes/panel_iframe.yaml
 
 # Discover some devices automatically
 # discovery:

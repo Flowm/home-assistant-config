@@ -3,28 +3,22 @@
   name: "Temperature"
   unit_of_measurement: "°C"
   entity_namespace: aq
-  value_template: "{{ value_json.temperature }}"
+  value_template: "{{ value_json.temp }}"
 - platform: mqtt
   state_topic: "sensor/air-quality"
   name: "Humidity"
   unit_of_measurement: "%"
   entity_namespace: aq
-  value_template: "{{ value_json.humidity }}"
+  value_template: "{{ value_json.humi }}"
 - platform: mqtt
   state_topic: "sensor/air-quality"
   name: "Pressure"
   unit_of_measurement: "Pa"
   entity_namespace: aq
-  value_template: "{{ value_json.pressure }}"
+  value_template: "{{ value_json.pres }}"
 - platform: mqtt
   state_topic: "sensor/air-quality"
   name: "CO2"
   unit_of_measurement: "CO2"
   entity_namespace: aq
-  value_template: "{{ value_json.co2 }}"
-- platform: mqtt
-  state_topic: "sensor/air-quality"
-  name: "TVOC"
-  unit_of_measurement: "TVOC"
-  entity_namespace: aq
-  value_template: "{{ value_json.tvoc }}"
+  value_template: "{{ value_json.gasp }}"

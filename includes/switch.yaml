@@ -1,2 +1,3 @@
 - platform: tplink
   host: !secret ip_tplink
+  friendly_name: "TP Icarus"

@@ -11,6 +11,7 @@ Default:
   - group.media
   - group.crypto
   - group.airquality
+  - group.energybasic
 
 WeatherView:
   name: Weather
@@ -45,6 +46,7 @@ SystemView:
   icon: mdi:settings
   view: yes
   entities:
+  - group.energyfull
   - group.network
   - group.devices
 
@@ -130,6 +132,22 @@ Crypto:
   entities:
   - sensor.crypto_bitcoin
   - sensor.crypto_ethereum
+
+EnergyBasic:
+  name: Energy
+  entities:
+  - sensor.tpicarus_watts
+  - sensor.tpicarus_kw_daily
+  - sensor.tpicarus_volts
+
+EnergyFull:
+  name: Energy
+  entities:
+  - sensor.tpicarus_watts
+  - sensor.tpicarus_kw_daily
+  - sensor.tpicarus_kw_total
+  - sensor.tpicarus_amps
+  - sensor.tpicarus_volts
 
 Network:
   name: Network

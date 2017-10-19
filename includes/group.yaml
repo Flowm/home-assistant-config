@@ -165,3 +165,8 @@ Devices:
   - device_tracker.iph7
   - sensor.iph7_battery_level
   - sensor.iph7_battery_state
+  - device_tracker.ipdm
+  - sensor.ipdm_battery_level
+  - sensor.ipdm_battery_state
+  - sensor.ipdm_battery_level_2
+  - sensor.ipdm_battery_state_2

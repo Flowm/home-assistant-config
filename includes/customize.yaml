@@ -17,6 +17,8 @@ light.pbedroom:
   hidden: true
 switch.tpicarus:
   hidden: true
+switch.tpspirit:
+  hidden: true
 remote.atv2:
   hidden: true
 media_player.atv2:

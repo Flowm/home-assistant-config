@@ -13,6 +13,16 @@ Default:
   - group.airquality
   - group.energy
 
+EnergyView:
+  name: Energy
+  icon: mdi:flash
+  view: yes
+  entities:
+  - group.energy
+  - group.energyicarus
+  - group.energyspirit
+  - group.energycoin
+
 WeatherView:
   name: Weather
   icon: mdi:white-balance-sunny
@@ -48,6 +58,7 @@ SystemView:
   entities:
   - group.energyicarus
   - group.energyspirit
+  - group.energycoin
   - group.network
   - group.devices
 
@@ -139,11 +150,8 @@ Energy:
   name: Energy
   entities:
   - sensor.tpicarus_watts
-  - sensor.tpicarus_kw_daily
-  - sensor.tpicarus_volts
   - sensor.tpspirit_watts
-  - sensor.tpspirit_kw_daily
-  - sensor.tpspirit_volts
+  - sensor.tpcoin_watts
 
 EnergyIcarus:
   name: Energy Icarus
@@ -162,6 +170,15 @@ EnergySpirit:
   - sensor.tpspirit_kw_total
   - sensor.tpspirit_amps
   - sensor.tpspirit_volts
+
+EnergyCoin:
+  name: Energy Coin
+  entities:
+  - sensor.tpcoin_watts
+  - sensor.tpcoin_kw_daily
+  - sensor.tpcoin_kw_total
+  - sensor.tpcoin_amps
+  - sensor.tpcoin_volts
 
 Network:
   name: Network

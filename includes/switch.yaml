@@ -4,3 +4,6 @@
 - platform: tplink
   host: !secret ip_tpspirit
   friendly_name: "TP Spirit"
+- platform: tplink
+  host: !secret ip_tpcoin
+  friendly_name: "TP Coin"

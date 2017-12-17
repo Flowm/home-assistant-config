@@ -51,3 +51,29 @@
       icon_template: mdi:flash
       value_template: '{{ states.switch.tpspirit.attributes["total_consumption"] | replace(" kW", "") | float }}'
       unit_of_measurement: 'kWh'
+
+#   tpcoin_amps:
+#     friendly_name: "Coin current"
+#     icon_template: mdi:power-plug
+#     value_template: '{{ states.switch.tpcoin.attributes["current"] | replace(" A", "") | float }}'
+#     unit_of_measurement: 'A'
+    tpcoin_volts:
+      friendly_name: "Coin voltage"
+      icon_template: mdi:power-plug
+      value_template: '{{ states.switch.tpcoin.attributes["voltage"] | replace(" V", "") | float }}'
+      unit_of_measurement: 'V'
+    tpcoin_watts:
+      friendly_name: "Coin power"
+      icon_template: mdi:flash
+      value_template: '{{ states.switch.tpcoin.attributes["current_consumption"] | replace(" W", "") | float }}'
+      unit_of_measurement: 'W'
+    tpcoin_kw_daily:
+      friendly_name: "Coin daily energy"
+      icon_template: mdi:flash
+      value_template: '{{ states.switch.tpcoin.attributes["daily_consumption"] | replace(" kW", "") | float }}'
+      unit_of_measurement: 'kWh'
+    tpcoin_kw_total:
+      friendly_name: "Coin total energy"
+      icon_template: mdi:flash
+      value_template: '{{ states.switch.tpcoin.attributes["total_consumption"] | replace(" kW", "") | float }}'
+      unit_of_measurement: 'kWh'

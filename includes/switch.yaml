@@ -1,9 +1,9 @@
 - platform: tplink
   host: !secret ip_tpicarus
-  friendly_name: "TP Icarus"
+  name: "TP Icarus"
 - platform: tplink
   host: !secret ip_tpspirit
-  friendly_name: "TP Spirit"
+  name: "TP Spirit"
 - platform: tplink
   host: !secret ip_tpcoin
-  friendly_name: "TP Coin"
+  name: "TP Coin"

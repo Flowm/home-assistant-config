@@ -31,6 +31,7 @@ recorder:
   purge_interval: 4
   purge_keep_days: 60
   exclude: !include includes/exclude.yaml
+  db_url: !secret mariadb_connection_url
 
 # Tracking state changes over time
 history:

@@ -21,4 +21,4 @@
   name: "CO2"
   unit_of_measurement: "CO2"
   entity_namespace: aq
-  value_template: "{{ value_json.gasp }}"
+  value_template: "{{ value_json.gasr }}"

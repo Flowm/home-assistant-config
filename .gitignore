@@ -1,11 +1,14 @@
 # Personal config
 secrets.yaml
-phue.conf
-.ios.conf
-.spotify-token-cache
 
 # Dymanic data
 media/
+
+# HA pairing
+.ios.conf
+.spotify-token-cache
+entity_registry.yaml
+phue.conf
 
 # HA data
 .HA_VERSION

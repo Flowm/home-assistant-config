@@ -2,5 +2,4 @@ bridges:
   - host: !secret ip_hue
     filename: phue.conf
     allow_unreachable: true
-    allow_in_emulated_hue: false
     allow_hue_groups: true

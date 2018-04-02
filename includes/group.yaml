@@ -41,6 +41,8 @@ LightView:
   entities:
   - group.lightbedroom
   - group.lightkitchen
+  - group.lightdining
+  - group.lightbathroom
   - group.lightpbedroom
 
 MediaView:
@@ -106,6 +108,8 @@ LightBedroom:
   - light.bg_all
   - light.bg_bed
   - light.bbed
+  - light.bbedh
+  - light.bbeds
   - light.bcenter
   - light.bdesk
   - light.bentrance
@@ -115,8 +119,19 @@ LightKitchen:
   entities:
   - light.kg_all
   - light.klights
-  - light.ktable
   - light.kboiler
+
+LightDining:
+  name: Lights Dining
+  entities:
+  - light.dg_all
+  - light.dtable
+
+LightBathroom:
+  name: Lights Bathroom
+  entities:
+  - light.sg_all
+  - light.sleft
 
 LightPBedroom:
   name: Lights PRoom
@@ -198,5 +213,6 @@ Devices:
   - device_tracker.ipdm
   - sensor.ipdm_battery_level
   - sensor.ipdm_battery_state
-  - sensor.ipdm_battery_level_2
-  - sensor.ipdm_battery_state_2
+  - device_tracker.ipd6
+  - sensor.ipd6_battery_level
+  - sensor.ipd6_battery_state

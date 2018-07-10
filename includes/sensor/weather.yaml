@@ -3,11 +3,11 @@
   api_key: !secret darksky_api_key
   monitored_conditions:
     - summary
-    - temperature
-    - precip_probability
     - precip_intensity
-    - temperature_min
-    - temperature_max
+    - precip_probability
+    - temperature
+    - temperature_high
+    - temperature_low
     - humidity
 - platform: moon
 - platform: time_date

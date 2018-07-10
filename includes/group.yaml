@@ -78,8 +78,8 @@ WeatherFull:
   - sensor.date__time
   - sun.sun
   - sensor.moon
-  - sensor.ds_daily_low_temperature
-  - sensor.ds_daily_high_temperature
+  - sensor.ds_overnight_low_temperature
+  - sensor.ds_daytime_high_temperature
   - sensor.ds_humidity
 
 WeatherRadar:

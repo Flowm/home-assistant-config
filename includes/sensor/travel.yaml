@@ -4,21 +4,25 @@
   destination: zone.tum
   entity_namespace: travel
   api_key: !secret google_api_key
+  scan_interval: 900
 - platform: google_travel_time
   name: TUM back
   origin: zone.tum
   destination: zone.home
   entity_namespace: travel
   api_key: !secret google_api_key
+  scan_interval: 900
 - platform: google_travel_time
   name: Aschau
   origin: zone.home
   destination: zone.aschau
   entity_namespace: travel
   api_key: !secret google_api_key
+  scan_interval: 900
 - platform: google_travel_time
   name: Aschau back
   origin: zone.aschau
   destination: zone.home
   entity_namespace: travel
   api_key: !secret google_api_key
+  scan_interval: 900

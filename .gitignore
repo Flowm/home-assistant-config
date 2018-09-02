@@ -13,6 +13,7 @@ phue.conf
 # HA data
 .HA_VERSION
 .uuid
+.storage/
 TODO.md
 deps/
 home-assistant.log

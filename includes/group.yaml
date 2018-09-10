@@ -142,7 +142,9 @@ Travel:
   name: Travel
   entities:
   - sensor.travel_tum
+  - sensor.travel_waze_tum
   - sensor.travel_tum_back
+  - sensor.travel_waze_tum_back
   - sensor.travel_aschau
   - sensor.travel_aschau_back
 

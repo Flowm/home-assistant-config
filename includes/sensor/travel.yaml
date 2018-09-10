@@ -26,3 +26,16 @@
   entity_namespace: travel
   api_key: !secret google_api_key
   scan_interval: 900
+
+- platform: waze_travel_time
+  name: Waze TUM
+  origin: zone.home
+  destination: zone.tum
+  entity_namespace: travel
+  region: 'EU'
+- platform: waze_travel_time
+  name: Waze TUM back
+  origin: zone.tum
+  destination: zone.home
+  entity_namespace: travel
+  region: 'EU'

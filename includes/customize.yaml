@@ -45,8 +45,12 @@ light.bg_bed:
   friendly_name: "Bed"
 device_tracker.iph7:
   friendly_name: "iPh7"
+device_tracker.phobos:
+  friendly_name: "Phobos"
 device_tracker.ipdm:
   friendly_name: "iPdm"
+device_tracker.ipd6:
+  friendly_name: "iPd6"
 
 # Group order
 # group.weatherbasic:

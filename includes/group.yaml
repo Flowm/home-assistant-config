@@ -210,6 +210,9 @@ Network:
 Devices:
   name: Devices
   entities:
+  - device_tracker.phobos
+  - sensor.phobos_battery_level
+  - sensor.phobos_battery_state
   - device_tracker.iph7
   - sensor.iph7_battery_level
   - sensor.iph7_battery_state

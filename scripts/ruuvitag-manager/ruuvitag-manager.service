@@ -1,0 +1,10 @@
+[Unit]
+Description=RuuviTag manager reads environmental data from Beacons sent by RuuviTag devices and publishes them over mqtt
+After=network.target
+
+[Service]
+ExecStart=/home/homeassistant/.homeassistant/scripts/ruuvitag-manager 192.168.144.7
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

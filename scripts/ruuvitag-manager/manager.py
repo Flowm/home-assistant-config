@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from ruuvitag_sensor.ruuvitag import RuuviTagSensor
 from sys import argv
 import paho.mqtt.client as mqtt

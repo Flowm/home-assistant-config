@@ -20,19 +20,36 @@
   unit_of_measurement: "CO2"
   entity_namespace: aq
 
-# Ruuvi
+# Ruuvi Outdoor
+- platform: mqtt
+  state_topic: "home/ruuvi/C59C37ED2999/temp"
+  name: "Temperature"
+  unit_of_measurement: "°C"
+  entity_namespace: ruuvi_outdoor
+- platform: mqtt
+  state_topic: "home/ruuvi/C59C37ED2999/humi"
+  name: "Humidity"
+  unit_of_measurement: "%"
+  entity_namespace: ruuvi_outdoor
+- platform: mqtt
+  state_topic: "home/ruuvi/C59C37ED2999/pres"
+  name: "Pressure"
+  unit_of_measurement: "Pa"
+  entity_namespace: ruuvi_outdoor
+
+# Ruuvi Indoor
 - platform: mqtt
   state_topic: "home/ruuvi/C8024A4240F1/temp"
-  name: "Outdoor Temperature"
+  name: "Temperature"
   unit_of_measurement: "°C"
-  entity_namespace: ruuvi
+  entity_namespace: ruuvi_indoor
 - platform: mqtt
   state_topic: "home/ruuvi/C8024A4240F1/humi"
-  name: "Outdoor Humidity"
+  name: "Humidity"
   unit_of_measurement: "%"
-  entity_namespace: ruuvi
+  entity_namespace: ruuvi_indoor
 - platform: mqtt
   state_topic: "home/ruuvi/C8024A4240F1/pres"
-  name: "Outdoor Pressure"
+  name: "Pressure"
   unit_of_measurement: "Pa"
-  entity_namespace: ruuvi
+  entity_namespace: ruuvi_indoor

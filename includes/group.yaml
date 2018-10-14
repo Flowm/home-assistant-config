@@ -10,7 +10,8 @@ Default:
   - group.travel
   - group.crypto
   - group.airquality
-  - group.airoutdoor
+  - group.ruuvioutdoor
+  - group.ruuviindoor
   - group.energy
 
 EnergyView:
@@ -33,7 +34,8 @@ WeatherView:
   - group.weatherradar
   - group.weatherimg
   - group.airquality
-  - group.airoutdoor
+  - group.ruuvioutdoor
+  - group.ruuviindoor
 
 LightView:
   name: Light
@@ -103,12 +105,19 @@ AirQuality:
   - sensor.aq_co2
   - sensor.aq_tvoc
 
-AirOutdoor:
-  name: Outdoor
+RuuviOutdoor:
+  name: Ruuvi Outdoor
   entities:
   - sensor.ruuvi_outdoor_temperature
   - sensor.ruuvi_outdoor_pressure
   - sensor.ruuvi_outdoor_humidity
+
+RuuviIndoor:
+  name: Ruuvi Indoor
+  entities:
+  - sensor.ruuvi_indoor_temperature
+  - sensor.ruuvi_indoor_pressure
+  - sensor.ruuvi_indoor_humidity
 
 LightBedroom:
   name: Lights Bedroom

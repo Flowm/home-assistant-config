@@ -18,7 +18,6 @@ config:
 http:
   server_host: 127.0.0.1
   base_url: !secret http_url
-  api_password: !secret http_password
   use_x_forwarded_for: True
   trusted_proxies:
     - 127.0.0.1

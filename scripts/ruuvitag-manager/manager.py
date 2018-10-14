@@ -16,7 +16,6 @@ def mqtt_on_disconnect(client, userdata, rc):
 
 
 def handle_data(found_data):
-    global client
     address = found_data[0].replace(':', '')
     beacon_data = found_data[1]
     client.publish('home/ruuvi/{}/temp'.format(address), beacon_data['temperature'])
@@ -33,12 +32,7 @@ def main():
     client.loop_start()
 
     print("Started Ruuvi Tag Manager")
-    while True:
-        try:
-            RuuviTagSensor.get_datas(handle_data)
-        except Exception as e:
-            print(e)
-            break
+    RuuviTagSensor.get_datas(handle_data)
     print("Stopped Ruuvi Tag Manager")
 
 

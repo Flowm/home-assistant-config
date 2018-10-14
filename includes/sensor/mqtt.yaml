@@ -1,3 +1,4 @@
+# Custom
 - platform: mqtt
   state_topic: "home/env/temp"
   name: "Temperature"
@@ -18,3 +19,20 @@
   name: "CO2"
   unit_of_measurement: "CO2"
   entity_namespace: aq
+
+# Ruuvi
+- platform: mqtt
+  state_topic: "home/ruuvi/C8024A4240F1/temp"
+  name: "Outdoor Temperature"
+  unit_of_measurement: "°C"
+  entity_namespace: ruuvi
+- platform: mqtt
+  state_topic: "home/ruuvi/C8024A4240F1/humi"
+  name: "Outdoor Humidity"
+  unit_of_measurement: "%"
+  entity_namespace: ruuvi
+- platform: mqtt
+  state_topic: "home/ruuvi/C8024A4240F1/pres"
+  name: "Outdoor Pressure"
+  unit_of_measurement: "Pa"
+  entity_namespace: ruuvi

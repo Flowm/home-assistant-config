@@ -3,7 +3,7 @@ Description=RuuviTag manager reads environmental data from Beacons sent by Ruuvi
 After=network.target
 
 [Service]
-ExecStart=/home/homeassistant/.homeassistant/scripts/ruuvitag-manager 192.168.144.7
+ExecStart=/home/homeassistant/.homeassistant/scripts/ruuvitag-manager/manager.py
 Restart=on-failure
 
 [Install]

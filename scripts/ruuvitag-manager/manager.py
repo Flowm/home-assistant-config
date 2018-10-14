@@ -7,20 +7,12 @@ import paho.mqtt.client as mqtt
 client = mqtt.Client()
 
 
-def mqtt_on_connect():
-    print("Connected to mqtt broker")
+def mqtt_on_connect(client, userdata, flags, rc):
+    print("Connected to Mqtt Broker")
 
 
-def mqtt_on_disconnect():
+def mqtt_on_disconnect(client, userdata, rc):
     print("Disconnected from mqtt broker")
-
-
-def mqtt_on_message(self, _client, _userdata, msg: mqtt.MQTTMessage):
-    try:
-        decoded = msg.payload.decode('utf-8', 'ignore')
-        print(decoded)
-    except Exception as e:
-        return
 
 
 def handle_data(found_data):
@@ -37,7 +29,6 @@ def main():
 
     client.on_connect = mqtt_on_connect
     client.on_disconnect = mqtt_on_disconnect
-    client.on_message = mqtt_on_message
     client.connect(host, 1883, keepalive=60)
     client.loop_start()
 

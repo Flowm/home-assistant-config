@@ -6,8 +6,8 @@
       14190563c81b5e479614ba0c4497d7c9a5544686: "spirit"
       644aa7413795f9dff664f0afdd623ec383a577a0: "iph7"
 - platform: apple_tv
-- platform: emby
-  host: !secret emby_ip
-  port: !secret emby_port
-  api_key: !secret emby_api_key
-  ssl: true
+#- platform: emby
+#  host: !secret emby_ip
+#  port: !secret emby_port
+#  api_key: !secret emby_api_key
+#  ssl: true

@@ -20,7 +20,7 @@ def handle_data(found_data):
     beacon_data = found_data[1]
     client.publish('home/ruuvi/{}/temp'.format(address), beacon_data['temperature'])
     client.publish('home/ruuvi/{}/humi'.format(address), beacon_data['humidity'])
-    client.publish('home/ruuvi/{}/pres'.format(address), beacon_data['pressure'])
+    client.publish('home/ruuvi/{}/pres'.format(address), int(beacon_data['pressure']*100))
 
 
 def main():

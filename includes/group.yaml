@@ -109,15 +109,15 @@ RuuviOutdoor:
   name: Ruuvi Outdoor
   entities:
   - sensor.ruuvi_outdoor_temperature
-  - sensor.ruuvi_outdoor_pressure
   - sensor.ruuvi_outdoor_humidity
+  - sensor.ruuvi_outdoor_pressure
 
 RuuviIndoor:
   name: Ruuvi Indoor
   entities:
   - sensor.ruuvi_indoor_temperature
-  - sensor.ruuvi_indoor_pressure
   - sensor.ruuvi_indoor_humidity
+  - sensor.ruuvi_indoor_pressure
 
 LightBedroom:
   name: Lights Bedroom

@@ -33,10 +33,18 @@ sensor.aq_humidity:
   icon: mdi:water-percent
 sensor.aq_pressure:
   icon: mdi:fan
-sensor.aq_co2:
-  icon: mdi:waves
-sensor.aq_tvoc:
-  icon: mdi:waves
+sensor.ruuvi_outdoor_temperature:
+  icon: mdi:thermometer
+sensor.ruuvi_outdoor_humidity:
+  icon: mdi:water-percent
+sensor.ruuvi_outdoor_pressure:
+  icon: mdi:fan
+sensor.ruuvi_indoor_temperature:
+  icon: mdi:thermometer
+sensor.ruuvi_indoor_humidity:
+  icon: mdi:water-percent
+sensor.ruuvi_indoor_pressure:
+  icon: mdi:fan
 
 # Name
 sensor.fritz_netmonitor:

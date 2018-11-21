@@ -240,3 +240,6 @@ Devices:
   - device_tracker.ipd6
   - sensor.ipd6_battery_level
   - sensor.ipd6_battery_state
+  - device_tracker.ipdp
+  - sensor.ipdp_battery_level
+  - sensor.ipdp_battery_state

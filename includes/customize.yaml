@@ -59,6 +59,8 @@ device_tracker.ipdm:
   friendly_name: "iPdm"
 device_tracker.ipd6:
   friendly_name: "iPd6"
+device_tracker.ipdp:
+  friendly_name: "iPdp"
 
 # Group order
 # group.weatherbasic:

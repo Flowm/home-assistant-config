@@ -1,9 +1,12 @@
 - platform: tplink
   host: !secret ip_tpicarus
   name: "TP Icarus"
+  scan_interval: 30
 - platform: tplink
   host: !secret ip_tpspirit
   name: "TP Spirit"
+  scan_interval: 30
 - platform: tplink
   host: !secret ip_tpcoin
   name: "TP Coin"
+  scan_interval: 30

@@ -30,8 +30,8 @@ updater:
 
 # Record event in sqlite db
 recorder:
-  purge_interval: 4
-  purge_keep_days: 60
+  purge_interval: 1
+  purge_keep_days: 7
   exclude: !include includes/exclude.yaml
   db_url: !secret mariadb_connection_url
 

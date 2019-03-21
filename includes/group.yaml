@@ -79,7 +79,7 @@ Weather:
 WeatherFull:
   name: Weather Full
   entities:
-  - sensor.date__time
+  - sensor.date_time
   - sun.sun
   - sensor.moon
   - sensor.ds_overnight_low_temperature

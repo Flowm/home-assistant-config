@@ -1,6 +1,6 @@
 entities:
   - sensor.moon
-  - sensor.date__time
+  - sensor.date_time
 domains:
   - automation
   - calendar

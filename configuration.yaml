@@ -56,7 +56,7 @@ influxdb:
   host: !secret influxdb_host
   username: !secret influxdb_user
   password: !secret influxdb_password
-  exclude: !include includes/exclude.yaml
+  exclude: !include includes/exclude-influx.yaml
   tags:
     instance: piot
     source: hass

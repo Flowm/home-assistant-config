@@ -1,6 +1,17 @@
 entities:
-  - sensor.moon
+  - sensor.aq_co2
+  - sensor.aq_humidity
+  - sensor.aq_pressure
+  - sensor.aq_temperature
   - sensor.date_time
+  - sensor.fritz_netmonitor
+  - sensor.moon
+  - sensor.ruuvi_indoor_humidity
+  - sensor.ruuvi_indoor_pressure
+  - sensor.ruuvi_indoor_temperature
+  - sensor.ruuvi_outdoor_humidity
+  - sensor.ruuvi_outdoor_pressure
+  - sensor.ruuvi_outdoor_temperature
 domains:
   - automation
   - calendar

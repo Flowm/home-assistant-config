@@ -1,6 +1,6 @@
 - alias: Update images
   trigger:
-    platform: time
+    platform: time_pattern
     minutes: "/20"
     seconds: 55
   action:

@@ -22,7 +22,7 @@ EnergyView:
   - group.energy
   - group.energyicarus
   - group.energyspirit
-  - group.energycoin
+  #- group.energycoin
 
 WeatherView:
   name: Weather
@@ -63,7 +63,7 @@ SystemView:
   entities:
   - group.energyicarus
   - group.energyspirit
-  - group.energycoin
+  #- group.energycoin
   - group.network
   - group.devices
 
@@ -82,8 +82,6 @@ WeatherFull:
   - sensor.date_time
   - sun.sun
   - sensor.moon
-  - sensor.ds_overnight_low_temperature
-  - sensor.ds_daytime_high_temperature
   - sensor.ds_humidity
 
 WeatherRadar:
@@ -103,7 +101,6 @@ AirQuality:
   - sensor.aq_humidity
   - sensor.aq_pressure
   - sensor.aq_co2
-  - sensor.aq_tvoc
 
 RuuviOutdoor:
   name: Ruuvi Outdoor
@@ -179,15 +176,15 @@ MediaStatus:
 Crypto:
   name: Crypto
   entities:
-  - sensor.crypto_bitcoin
-  - sensor.crypto_ethereum
+  #- sensor.crypto_bitcoin
+  #- sensor.crypto_ethereum
 
 Energy:
   name: Energy
   entities:
   - sensor.tpicarus_watts
   - sensor.tpspirit_watts
-  - sensor.tpcoin_watts
+  #- sensor.tpcoin_watts
 
 EnergyIcarus:
   name: Energy Icarus
@@ -195,7 +192,7 @@ EnergyIcarus:
   - sensor.tpicarus_watts
   - sensor.tpicarus_kw_daily
   - sensor.tpicarus_kw_total
-  - sensor.tpicarus_amps
+  #- sensor.tpicarus_amps
   - sensor.tpicarus_volts
 
 EnergySpirit:
@@ -204,26 +201,26 @@ EnergySpirit:
   - sensor.tpspirit_watts
   - sensor.tpspirit_kw_daily
   - sensor.tpspirit_kw_total
-  - sensor.tpspirit_amps
+  #- sensor.tpspirit_amps
   - sensor.tpspirit_volts
 
-EnergyCoin:
-  name: Energy Coin
-  entities:
-  - sensor.tpcoin_watts
-  - sensor.tpcoin_kw_daily
-  - sensor.tpcoin_kw_total
-  - sensor.tpcoin_amps
-  - sensor.tpcoin_volts
+#EnergyCoin:
+#  name: Energy Coin
+#  entities:
+#  - sensor.tpcoin_watts
+#  - sensor.tpcoin_kw_daily
+#  - sensor.tpcoin_kw_total
+#  - sensor.tpcoin_amps
+#  - sensor.tpcoin_volts
 
 Network:
   name: Network
   entities:
   - sensor.fritz_netmonitor
-  - sensor.speedtest_download
-  - sensor.speedtest_upload
-  - sensor.speedtest_ping
-  - sensor.fastcom_download
+  #- sensor.speedtest_download
+  #- sensor.speedtest_upload
+  #- sensor.speedtest_ping
+  #- sensor.fastcom_download
 
 Devices:
   name: Devices
@@ -231,15 +228,9 @@ Devices:
   - device_tracker.phobos
   - sensor.phobos_battery_level
   - sensor.phobos_battery_state
-  - device_tracker.iph7
-  - sensor.iph7_battery_level
-  - sensor.iph7_battery_state
   - device_tracker.ipdm
   - sensor.ipdm_battery_level
   - sensor.ipdm_battery_state
-  - device_tracker.ipd6
-  - sensor.ipd6_battery_level
-  - sensor.ipd6_battery_state
   - device_tracker.ipdp
   - sensor.ipdp_battery_level
   - sensor.ipdp_battery_state

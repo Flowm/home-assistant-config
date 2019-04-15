@@ -1,0 +1,5 @@
+discovery: false
+switch:
+  - host: !secret ip_tpicarus
+  - host: !secret ip_tpspirit
+  - host: !secret ip_tpcoin

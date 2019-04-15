@@ -15,11 +15,11 @@ light.kitchen:
   hidden: true
 light.pbedroom:
   hidden: true
-switch.tp_icarus:
+switch.tpicarus:
   hidden: true
-switch.tp_spirit:
+switch.tpspirit:
   hidden: true
-switch.tp_coin:
+switch.tpcoin:
   hidden: true
 remote.atv2:
   hidden: true

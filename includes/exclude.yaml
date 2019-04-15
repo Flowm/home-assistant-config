@@ -12,6 +12,21 @@ entities:
   - sensor.ruuvi_outdoor_humidity
   - sensor.ruuvi_outdoor_pressure
   - sensor.ruuvi_outdoor_temperature
+  - sensor.tpicarus_watts
+  - sensor.tpicarus_kw_daily
+  - sensor.tpicarus_kw_total
+  - sensor.tpicarus_amps
+  - sensor.tpicarus_volts
+  - sensor.tpspirit_watts
+  - sensor.tpspirit_kw_daily
+  - sensor.tpspirit_kw_total
+  - sensor.tpspirit_amps
+  - sensor.tpspirit_volts
+  - sensor.tpcoin_watts
+  - sensor.tpcoin_kw_daily
+  - sensor.tpcoin_kw_total
+  - sensor.tpcoin_amps
+  - sensor.tpcoin_volts
 domains:
   - automation
   - calendar

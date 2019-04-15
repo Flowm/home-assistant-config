@@ -1,0 +1,79 @@
+- platform: template
+  sensors:
+#   tpicarus_amps:
+#     friendly_name: "Icarus current"
+#     icon_template: mdi:power-plug
+#     value_template: '{{ states.switch.tpicarus.attributes["current_a"] | float }}'
+#     unit_of_measurement: 'A'
+    tpicarus_volts:
+      friendly_name: "Icarus voltage"
+      icon_template: mdi:power-plug
+      value_template: '{{ states.switch.tpicarus.attributes["voltage"] | float }}'
+      unit_of_measurement: 'V'
+    tpicarus_watts:
+      friendly_name: "Icarus power"
+      icon_template: mdi:flash
+      value_template: '{{ states.switch.tpicarus.attributes["current_power_w"] | float }}'
+      unit_of_measurement: 'W'
+    tpicarus_kw_daily:
+      friendly_name: "Icarus daily energy"
+      icon_template: mdi:flash
+      value_template: '{{ states.switch.tpicarus.attributes["today_energy_kwh"] | float }}'
+      unit_of_measurement: 'kWh'
+    tpicarus_kw_total:
+      friendly_name: "Icarus total energy"
+      icon_template: mdi:flash
+      value_template: '{{ states.switch.tpicarus.attributes["total_energy_kwh"] | float }}'
+      unit_of_measurement: 'kWh'
+
+#   tpspirit_amps:
+#     friendly_name: "Spirit current"
+#     icon_template: mdi:power-plug
+#     value_template: '{{ states.switch.tpspirit.attributes["current_a"] | float }}'
+#     unit_of_measurement: 'A'
+    tpspirit_volts:
+      friendly_name: "Spirit voltage"
+      icon_template: mdi:power-plug
+      value_template: '{{ states.switch.tpspirit.attributes["voltage"] | float }}'
+      unit_of_measurement: 'V'
+    tpspirit_watts:
+      friendly_name: "Spirit power"
+      icon_template: mdi:flash
+      value_template: '{{ states.switch.tpspirit.attributes["current_power_w"] | float }}'
+      unit_of_measurement: 'W'
+    tpspirit_kw_daily:
+      friendly_name: "Spirit daily energy"
+      icon_template: mdi:flash
+      value_template: '{{ states.switch.tpspirit.attributes["today_energy_kwh"] | float }}'
+      unit_of_measurement: 'kWh'
+    tpspirit_kw_total:
+      friendly_name: "Spirit total energy"
+      icon_template: mdi:flash
+      value_template: '{{ states.switch.tpspirit.attributes["total_energy_kwh"] | float }}'
+      unit_of_measurement: 'kWh'
+
+#   tpcoin_amps:
+#     friendly_name: "Coin current"
+#     icon_template: mdi:power-plug
+#     value_template: '{{ states.switch.tpcoin.attributes["current_a"] | float }}'
+#     unit_of_measurement: 'A'
+#   tpcoin_volts:
+#     friendly_name: "Coin voltage"
+#     icon_template: mdi:power-plug
+#     value_template: '{{ states.switch.tpcoin.attributes["voltage"] | float }}'
+#     unit_of_measurement: 'V'
+#   tpcoin_watts:
+#     friendly_name: "Coin power"
+#     icon_template: mdi:flash
+#     value_template: '{{ states.switch.tpcoin.attributes["current_power_w"] | float }}'
+#     unit_of_measurement: 'W'
+#   tpcoin_kw_daily:
+#     friendly_name: "Coin daily energy"
+#     icon_template: mdi:flash
+#     value_template: '{{ states.switch.tpcoin.attributes["today_energy_kwh"] | float }}'
+#     unit_of_measurement: 'kWh'
+#   tpcoin_kw_total:
+#     friendly_name: "Coin total energy"
+#     icon_template: mdi:flash
+#     value_template: '{{ states.switch.tpcoin.attributes["total_energy_kwh"] | float }}'
+#     unit_of_measurement: 'kWh'

@@ -3,13 +3,14 @@ version: "3"
 services:
   teslamate:
     image: teslamate/teslamate:latest
-    restart: always
+    restart: unless-stopped
     environment:
-      - DATABASE_USER=teslamate
-      - DATABASE_PASS=secret
-      - DATABASE_NAME=teslamate
-      - DATABASE_HOST=database
-      - MQTT_HOST=mosquitto
+      - DATABASE_USER=${DATABASE_USER}
+      - DATABASE_PASS=${DATABASE_PASS}
+      - DATABASE_NAME=${DATABASE_NAME}
+      - DATABASE_HOST=${DATABASE_HOST}
+      - MQTT_HOST=${MQTT_HOST}
+      - ENCRYPTION_KEY=${ENCRYPTION_KEY}
     ports:
       - 4000:4000
     volumes:
@@ -19,22 +20,22 @@ services:
 
   database:
     image: postgres:13
-    restart: always
+    restart: unless-stopped
     environment:
-      - POSTGRES_USER=teslamate
-      - POSTGRES_PASSWORD=secret
-      - POSTGRES_DB=teslamate
+      - POSTGRES_USER=${DATABASE_USER}
+      - POSTGRES_PASSWORD=${DATABASE_PASS}
+      - POSTGRES_DB=${DATABASE_NAME}
     volumes:
       - teslamate-db:/var/lib/postgresql/data
 
   grafana:
     image: teslamate/grafana:latest
-    restart: always
+    restart: unless-stopped
     environment:
-      - DATABASE_USER=teslamate
-      - DATABASE_PASS=secret
-      - DATABASE_NAME=teslamate
-      - DATABASE_HOST=database
+      - DATABASE_USER=${DATABASE_USER}
+      - DATABASE_PASS=${DATABASE_PASS}
+      - DATABASE_NAME=${DATABASE_NAME}
+      - DATABASE_HOST=${DATABASE_HOST}
     ports:
       - 3000:3000
     volumes:
@@ -42,13 +43,22 @@ services:
 
   mosquitto:
     image: eclipse-mosquitto:2
-    restart: always
+    restart: unless-stopped
     command: mosquitto -c /mosquitto-no-auth.conf
     ports:
       - 1883:1883
     volumes:
       - mosquitto-conf:/mosquitto/config
       - mosquitto-data:/mosquitto/data
+
+  abrp:
+    image: fetzu/teslamate-abrp:latest
+    restart: unless-stopped
+    environment:
+      - MQTT_SERVER=${MQTT_HOST}
+      - USER_TOKEN=${USER_TOKEN}
+      - CAR_NUMBER=${CAR_NUMBER}
+      - CAR_MODEL=${CAR_MODEL}
 
 volumes:
   teslamate-db:

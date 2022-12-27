@@ -1,0 +1,30 @@
+version: "3.4"
+
+services:
+  neko:
+    image: m1k1o/neko:firefox
+    restart: unless-stopped
+    shm_size: 2gb
+    environment:
+       - NEKO_SCREEN=1920x1080@30
+       - NEKO_PASSWORD=${NEKO_PASSWORD}
+       - NEKO_PASSWORD_ADMIN=${NEKO_PASSWORD_ADMIN}
+       - NEKO_ICELITE=1
+       - NEKO_EPR=52000-52100
+         #- NEKO_TCPMUX=52000
+         #- NEKO_UDPMUX=52000
+         #- NEKO_NAT1TO1=192.169.144.10
+    ports:
+      - 8080:8080
+      - 52000-52100:52000-52100/udp
+        #- "52000:52000"
+    volumes:
+      - ./policies-firefox.json:/usr/lib/firefox/distribution/policies.json
+      - ./policies-chromium.json:/etc/chromium/policies/managed/policies.json
+      - profile-firefox:/home/neko/.mozilla/firefox/profile.default
+      - profile-chromium:/home/neko/.config/chromium
+      - /mnt/tmp:/home/neko/Downloads
+
+volumes:
+  profile-firefox:
+  profile-chromium:

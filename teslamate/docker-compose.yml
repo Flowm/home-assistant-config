@@ -40,6 +40,8 @@ services:
       - 3000:3000
     volumes:
       - teslamate-grafana-data:/var/lib/grafana
+      - ./Teslamate-CustomGrafanaDashboards/customdashboards.yml:/etc/grafana/provisioning/dashboards/customdashboards.yml
+      - ./Teslamate-CustomGrafanaDashboards/dashboards:/TeslamateCustomDashboards
 
   mosquitto:
     image: eclipse-mosquitto:2
@@ -53,6 +55,7 @@ services:
 
   abrp:
     image: fetzu/teslamate-abrp:latest
+    init: true
     restart: unless-stopped
     environment:
       - MQTT_SERVER=${MQTT_HOST}

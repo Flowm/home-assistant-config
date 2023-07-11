@@ -1,0 +1,3 @@
+[submodule "teslamate/Teslamate-CustomGrafanaDashboards"]
+	path = teslamate/Teslamate-CustomGrafanaDashboards
+	url = https://github.com/jheredianet/Teslamate-CustomGrafanaDashboards.git

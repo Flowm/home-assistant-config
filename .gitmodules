@@ -1,3 +1,6 @@
 [submodule "teslamate/Teslamate-CustomGrafanaDashboards"]
 	path = teslamate/Teslamate-CustomGrafanaDashboards
 	url = https://github.com/jheredianet/Teslamate-CustomGrafanaDashboards.git
+[submodule "ollama/ollama-webui"]
+	path = ollama/ollama-webui
+	url = https://github.com/ollama-webui/ollama-webui.git

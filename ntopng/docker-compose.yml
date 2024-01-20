@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  ntopng:
+    image: ntop/ntopng:stable
+    restart: unless-stopped
+    volumes:
+      - data:/var/lib/ntopng
+      - fifo:/pcap
+      - ./ntopng.conf:/ntopng.conf:ro
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - TZ=Europe/Rome
+    command:
+      - "/ntopng.conf"
+    ports:
+      - 3001:3000
+    depends_on:
+      - fritzpcap
+
+  fritzpcap:
+    build: .
+    restart: unless-stopped
+    environment:
+      - FRITZIP=$FRITZIP
+      - FRITZUSER=$FRITZUSER
+      - FRITZPWD=$FRITZPWD
+    volumes:
+      - fifo:/pcap
+
+volumes:
+  data:
+  fifo:

@@ -1,0 +1,16 @@
+# Personal config
+secrets.yaml
+
+# Dymanic data
+media/
+
+# HA pairing
+.ios.conf
+.spotify-token-cache
+entity_registry.yaml
+phue.conf
+
+# HA data
+.storage/
+home-assistant.log*
+home-assistant_v2.db*

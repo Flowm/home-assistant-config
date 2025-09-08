@@ -1,3 +1,6 @@
 [submodule "teslamate/Teslamate-CustomGrafanaDashboards"]
 	path = teslamate/Teslamate-CustomGrafanaDashboards
 	url = https://github.com/jheredianet/Teslamate-CustomGrafanaDashboards.git
+[submodule "llm"]
+	path = llm
+	url = git@github.com:Flowm/llm-stack.git

@@ -1,14 +1,15 @@
 services:
   homeassistant:
-    image: lscr.io/linuxserver/homeassistant:latest
+    image: homeassistant/home-assistant:2025.9
     restart: unless-stopped
     environment:
-      - PUID=1000
       - PGID=1000
+      - PUID=1000
       - TZ=Europe/Berlin
     network_mode: host
     volumes:
       - ./config:/config
+      - ./config/docker/run:/etc/services.d/home-assistant/run
     depends_on:
       - database
 
@@ -25,7 +26,7 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
   grafana:
-    image: grafana/grafana:latest
+    image: grafana/grafana:12.1
     restart: unless-stopped
     environment:
       - DATABASE_USER=${DATABASE_USER}

@@ -1,18 +1,26 @@
 services:
   homeassistant:
-    image: ghcr.io/home-assistant/home-assistant:stable
+    image: lscr.io/linuxserver/homeassistant:latest
     restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Berlin
     network_mode: host
     volumes:
       - ./config:/config
+    depends_on:
+      - database
 
   database:
-    image: postgres:17
+    image: timescale/timescaledb-ha:pg17-all
     restart: unless-stopped
     environment:
       - POSTGRES_USER=${DATABASE_USER}
       - POSTGRES_PASSWORD=${DATABASE_PASS}
       - POSTGRES_DB=${DATABASE_NAME}
+    ports:
+      - 127.0.0.1:5432:5432
     volumes:
       - postgres_data:/var/lib/postgresql/data
 

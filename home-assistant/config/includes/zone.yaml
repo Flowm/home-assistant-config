@@ -1,0 +1,23 @@
+- name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  radius: !secret home_radius
+  icon: mdi:home
+
+- name: Work
+  latitude: !secret work_latitude
+  longitude: !secret work_longitude
+  radius: !secret work_radius
+  icon: mdi:briefcase
+
+- name: Aschau
+  latitude: !secret aschau_latitude
+  longitude: !secret aschau_longitude
+  radius: !secret aschau_radius
+  icon: mdi:home
+
+- name: Germering
+  latitude: !secret germering_latitude
+  longitude: !secret germering_longitude
+  radius: !secret germering_radius
+  icon: mdi:home

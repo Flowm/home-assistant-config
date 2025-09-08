@@ -12,5 +12,6 @@ phue.conf
 
 # HA data
 .storage/
+.cache/
 home-assistant.log*
 home-assistant_v2.db*

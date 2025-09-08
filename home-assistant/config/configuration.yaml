@@ -1,3 +1,10 @@
+homeassistant:
+  name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: !secret home_elevation
+  unit_system: metric
+  time_zone: Europe/Berlin
 
 # Loads default set of integrations. Do not remove.
 default_config:
@@ -6,6 +13,16 @@ default_config:
 frontend:
   themes: !include_dir_merge_named themes
 
-automation: !include automations.yaml
-script: !include scripts.yaml
-scene: !include scenes.yaml
+recorder:
+  purge_keep_days: 30
+  #exclude: !include includes/exclude.yaml
+  db_url: !secret postgres_connection_url
+
+ltss:
+  db_url: !secret postgres_connection_url
+  chunk_time_interval: 2592000000000
+  include:
+    domains:
+      - sensor
+
+zone: !include includes/zone.yaml

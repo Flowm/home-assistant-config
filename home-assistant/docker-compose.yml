@@ -24,5 +24,19 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
+  grafana:
+    image: teslamate/grafana:latest
+    restart: unless-stopped
+    environment:
+      - DATABASE_USER=${DATABASE_USER}
+      - DATABASE_PASS=${DATABASE_PASS}
+      - DATABASE_NAME=${DATABASE_NAME}
+      - DATABASE_HOST=${DATABASE_HOST}
+    ports:
+      - 3001:3000
+    volumes:
+      - grafana_data:/var/lib/grafana
+
 volumes:
   postgres_data:
+  grafana_data:

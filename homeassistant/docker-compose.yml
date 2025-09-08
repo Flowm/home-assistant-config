@@ -25,7 +25,7 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
   grafana:
-    image: teslamate/grafana:latest
+    image: grafana/grafana:latest
     restart: unless-stopped
     environment:
       - DATABASE_USER=${DATABASE_USER}

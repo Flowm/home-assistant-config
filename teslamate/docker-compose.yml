@@ -24,7 +24,7 @@ services:
       - POSTGRES_PASSWORD=${DATABASE_PASS}
       - POSTGRES_DB=${DATABASE_NAME}
     volumes:
-      - teslamate-db:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data
 
   grafana:
     image: teslamate/grafana:latest
@@ -37,7 +37,7 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - teslamate-grafana-data:/var/lib/grafana
+      - grafana_data:/var/lib/grafana
       - ./Teslamate-CustomGrafanaDashboards/customdashboards.yml:/etc/grafana/provisioning/dashboards/customdashboards.yml
       - ./Teslamate-CustomGrafanaDashboards/dashboards:/TeslamateCustomDashboards
 
@@ -48,8 +48,8 @@ services:
     ports:
       - 1883:1883
     volumes:
-      - mosquitto-conf:/mosquitto/config
-      - mosquitto-data:/mosquitto/data
+      - mosquitto_conf:/mosquitto/config
+      - mosquitto_data:/mosquitto/data
 
   abrp:
     image: fetzu/teslamate-abrp:latest
@@ -62,7 +62,7 @@ services:
       - CAR_MODEL=${CAR_MODEL}
 
 volumes:
-  teslamate-db:
-  teslamate-grafana-data:
-  mosquitto-conf:
-  mosquitto-data:
+  postgres_data:
+  grafana_data:
+  mosquitto_conf:
+  mosquitto_data:

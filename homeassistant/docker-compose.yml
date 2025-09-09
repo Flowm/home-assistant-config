@@ -11,7 +11,9 @@ services:
       - ./config:/config
       - ./config/docker/run:/etc/services.d/home-assistant/run
     depends_on:
-      - database
+      database:
+        condition: service_healthy
+        restart: true
 
   database:
     image: timescale/timescaledb-ha:pg17-all
@@ -24,6 +26,8 @@ services:
       - 127.0.0.1:5432:5432
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DATABASE_USER} -d ${DATABASE_NAME}"]
 
   grafana:
     image: grafana/grafana:12.1
@@ -37,6 +41,10 @@ services:
       - 3001:3000
     volumes:
       - grafana_data:/var/lib/grafana
+    depends_on:
+      database:
+        condition: service_healthy
+        restart: true
 
 volumes:
   postgres_data:

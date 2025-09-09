@@ -1,7 +1,7 @@
-- name: Home
-  latitude: !secret home_latitude
-  longitude: !secret home_longitude
-  radius: !secret home_radius
+- name: Kirchheim
+  latitude: !secret kirchheim_latitude
+  longitude: !secret kirchheim_longitude
+  radius: !secret kirchheim_radius
   icon: mdi:home
 
 - name: Work

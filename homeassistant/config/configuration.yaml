@@ -1,8 +1,8 @@
 homeassistant:
   name: Home
-  latitude: !secret home_latitude
-  longitude: !secret home_longitude
-  elevation: !secret home_elevation
+  latitude: !secret kirchheim_latitude
+  longitude: !secret kirchheim_longitude
+  elevation: !secret kirchheim_elevation
   unit_system: metric
   time_zone: Europe/Berlin
 
@@ -25,4 +25,5 @@ ltss:
     domains:
       - sensor
 
-zone: !include includes/zone.yaml
+automation: !include automations.yaml
+zone: !include zone.yaml

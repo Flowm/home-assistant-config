@@ -3,6 +3,7 @@ secrets.yaml
 
 # Dymanic data
 media/
+backups/
 
 # HA pairing
 .ios.conf

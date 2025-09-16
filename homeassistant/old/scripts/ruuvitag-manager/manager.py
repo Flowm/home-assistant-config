@@ -58,8 +58,8 @@ def publish_ha_config(address):
         },
         {
             "name": "battery",
-            "display_name": "Battery",
-            "device_class": "battery",
+            "display_name": "Battery Voltage",
+            "device_class": "voltage",
             "unit": "mV",
             "value_template": "{{ value_json.battery }}",
             "state_class": "measurement"

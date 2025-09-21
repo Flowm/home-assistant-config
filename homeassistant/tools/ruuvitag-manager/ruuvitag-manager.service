@@ -1,10 +1,22 @@
 [Unit]
-Description=RuuviTag manager reads environmental data from Beacons sent by RuuviTag devices and publishes them over mqtt
-After=network.target
+Description=RuuviTag Manager - reads environmental data from RuuviTag BLE sensors and publishes to MQTT
+After=network.target bluetooth.target
+Wants=bluetooth.target
 
 [Service]
-ExecStart=/home/homeassistant/.homeassistant/scripts/ruuvitag-manager/manager.py
+Type=simple
+ExecStart=/home/flow/dev/homelab/homeassistant/tools/ruuvitag-manager/.venv/bin/python /home/flow/dev/homelab/homeassistant/tools/ruuvitag-manager/ruuvitag-manager.py 192.168.144.10
 Restart=on-failure
+RestartSec=5
+User=flow
+Group=flow
+
+# Environment variables
+Environment=PYTHONUNBUFFERED=1
+
+# Capabilities needed for Bluetooth access
+CapabilityBoundingSet=CAP_NET_RAW CAP_NET_ADMIN
+AmbientCapabilities=CAP_NET_RAW CAP_NET_ADMIN
 
 [Install]
 WantedBy=multi-user.target

@@ -170,7 +170,7 @@ class RuuviTagManager:
 
             # Publish HA config for new devices
             if address not in self.configured_devices:
-                logger.info(f"Discovered new RuuviTag: {mac_address}")
+                logger.info(f"Discovered new RuuviTag: {address} ({mac_address})")
                 self._publish_ha_config(address)
                 self.configured_devices.add(address)
 
@@ -178,7 +178,7 @@ class RuuviTagManager:
             state_data = self._extract_sensor_data(beacon_data)
 
             if not state_data:
-                logger.warning(f"No valid sensor data found for {mac_address}")
+                logger.warning(f"No valid sensor data found for {address}")
                 return
 
             # Publish to MQTT
@@ -186,9 +186,9 @@ class RuuviTagManager:
             result = self.client.publish(state_topic, json.dumps(state_data, ensure_ascii=False))
 
             if result.rc == mqtt.MQTT_ERR_SUCCESS:
-                logger.info(f"Published data for {mac_address}: {state_data}")
+                logger.info(f"Published data for {address}: {state_data}")
             else:
-                logger.warning(f"Failed to publish data for {mac_address}: {result.rc}")
+                logger.warning(f"Failed to publish data for {address}: {result.rc}")
 
         except Exception as e:
             logger.error(f"Error handling data: {e}")
